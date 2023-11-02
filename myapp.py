@@ -38,14 +38,15 @@ if uploaded_file is not None:
     st.markdown("---")
 
     # Display total 'Fixed Price' and 'Hourly' amounts
-    st.write("#### Total Earning: ", f"<span style='color:green;'>${filtered_df['Amount'].sum():,}</span>", unsafe_allow_html=True)
+    st.write("##### Total Earning: ", f"<span style='color:green;'>$ {filtered_df['Amount'].sum():,}</span>", unsafe_allow_html=True)
+    st.write("##### Charity (2.5%): ", f"<span style='color:red;'>$ {filtered_df['Amount'].sum() * 2.5 / 100:,}</span>", unsafe_allow_html=True)
 
     # Display sum of 'Fixed Price' and 'Hourly' amounts
     # st.write(" #### Sum of Fixed Price and Hourly")
     st.write(filtered_df.groupby('Type')['Amount'].sum())
 
     # Create a bar chart for the monthly summary
-    st.write("#### Monthly Bar Chart")
+    st.write("##### Monthly Bar Chart")
     fig, ax = plt.subplots()
     bar_chart = ax.bar(monthly_summary['Month'], monthly_summary['Amount'])
 
@@ -57,7 +58,7 @@ if uploaded_file is not None:
     st.pyplot(fig)
 
     # Display the monthly summary
-    st.write("#### Monthly Summary")
+    st.write("##### Monthly Summary")
     st.write(monthly_summary)
 
 st.markdown("---")
