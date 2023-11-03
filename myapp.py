@@ -86,7 +86,7 @@ if uploaded_file is not None:
         st.write("##### Total Earning: ", f"<span style='color:green;'>$ {total_earning_included_fee:,}</span>", unsafe_allow_html=True)
         charity_percentage = 2.5
         st.write("##### Charity (2.5%): ", f"<span style='color:red;'>$ {total_earning_included_fee * charity_percentage / 100:.2f}</span>", unsafe_allow_html=True)
-        st.write("##### Total Fee: ", f"<span style='color:red;'>$ {abs(df[df['Type'].isin(['Service Fee'])]['Amount'].sum()):.2f}</span>", unsafe_allow_html=True)
+        st.write("##### Total Fee: ", f"<span style='color:red;'>$ {abs(df[df['Type'].isin(['Service Fee'])]['Amount'].sum()):,.2f}</span>", unsafe_allow_html=True)
 
 
         # Display sum of 'Fixed Price' and 'Hourly' amounts
