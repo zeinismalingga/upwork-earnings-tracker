@@ -110,4 +110,4 @@ if uploaded_file is not None:
         # st.write(monthly_summary)
 
 st.markdown("---")
-st.markdown("Made with ❤️ by [Zein](https://www.upwork.com/freelancers/zeini)")
+st.markdown("Made with ❤️ by [Zein](https://www.upwork.com/freelancers/zeinismalingga)")
